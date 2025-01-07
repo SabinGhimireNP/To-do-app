@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(167, 228, 250);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .inner_body {
+        border: 2px solid black;
+        height: auto;
+        width: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: antiquewhite;
+      }
+      .title {
+        background-color: rgb(236, 196, 145);
+        height: auto;
+        width: 100%;
+        text-align: center;
+      }
+      .main {
+        padding: 1rem;
+      }
+      .list {
+        font-weight: bold;
+        text-decoration: underline;
+        color: rgb(6, 4, 15);
+      }
+      input {
+        width: 10rem;
+        height: 1rem;
+        padding: 8px;
+        border-radius: 15px;
+        background-color: antiquewhite;
+      }
+      button {
+        height: 2rem;
+        width: auto;
+        border-radius: 20px;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inner_body">
+      <div class="title">
+        <h1>MY todo List</h1>
+      </div>
+      <div class="main">
+        <input type="text" class="input" placeholder="Your Text" value=" " />
+        <button class="add">Add</button>
+      </div>
+      <ul class="list"></ul>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
