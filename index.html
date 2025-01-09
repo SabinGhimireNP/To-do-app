@@ -50,7 +50,7 @@
       }
       button {
         height: 2rem;
-        width: rem;
+        width: 8rem;
         border-radius: 20px;
         background-color: antiquewhite;
       }
@@ -58,10 +58,28 @@
         height: 2rem;
         width: 5rem;
       }
-      @media (width<700) {
+      @media (max-width: 700px) {
         body {
-          width: 100vh;
+          width: 100%;
           font-size: medium;
+        }
+        input {
+          width: auto;
+        }
+        button {
+          height: auto;
+          width: auto;
+        }
+        .inner_body {
+          border: 2px solid black;
+          height: auto;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+          flex-direction: column;
+          background-color: antiquewhite;
         }
       }
     </style>
@@ -74,15 +92,16 @@
       <div class="main">
         <input
           type="text"
+          id="input"
           class="input"
           placeholder="Your Text"
           required
           value=""
         />
 
-        <button class="add" type="submit">Add</button>
+        <button id="add" class="add" type="submit">Add</button>
       </div>
-      <ul class="list"></ul>
+      <ul id="list" class="add"></ul>
       <script src="script.js"></script>
     </div>
   </body>
