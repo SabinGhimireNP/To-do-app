@@ -1,6 +1,7 @@
 let var1 = document.querySelector(".input");
 let btn = document.querySelector(".add");
 let todo = document.querySelector(".list");
+let da = "";
 // console.log(var1);
 // console.log(btn);
 // console.log(todo);
@@ -15,8 +16,14 @@ btn.addEventListener("click", function () {
     todo.removeChild(li);
     todo.removeChild(deletebutton);
   });
+  if (var1.value === da) {
+    alert("Please Enter a valid input");
+  } else {
+    todo.appendChild(li);
+    todo.appendChild(deletebutton);
 
-  // console.log(deletebutton);
-  todo.appendChild(li);
-  todo.appendChild(deletebutton);
+    // console.log(deletebutton);
+    todo.appendChild(li);
+    todo.appendChild(deletebutton);
+  }
 });
