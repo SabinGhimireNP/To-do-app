@@ -6,20 +6,22 @@
     <title>Document</title>
     <style>
       body {
+        /* width: 100vh; */
         font-family: Arial, sans-serif;
+        font-size: small;
         background-color: rgb(167, 228, 250);
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
       }
       .inner_body {
         border: 2px solid black;
-        height: auto;
-        width: 100vh;
+        height: 100%;
+        width: 100%;
         border-radius: 20px;
         display: flex;
         align-items: center;
+        align-content: center;
         justify-content: center;
         flex-direction: column;
         background-color: antiquewhite;
@@ -40,7 +42,7 @@
         color: rgb(6, 4, 15);
       }
       input {
-        width: 10rem;
+        width: 30rem;
         height: 1rem;
         padding: 8px;
         border-radius: 15px;
@@ -48,9 +50,19 @@
       }
       button {
         height: 2rem;
-        width: auto;
+        width: rem;
         border-radius: 20px;
         background-color: antiquewhite;
+      }
+      .add {
+        height: 2rem;
+        width: 5rem;
+      }
+      @media (width<700) {
+        body {
+          width: 100vh;
+          font-size: medium;
+        }
       }
     </style>
   </head>
@@ -60,8 +72,15 @@
         <h1>MY todo List</h1>
       </div>
       <div class="main">
-        <input type="text" class="input" placeholder="Your Text" value=" " />
-        <button class="add">Add</button>
+        <input
+          type="text"
+          class="input"
+          placeholder="Your Text"
+          required
+          value=""
+        />
+
+        <button class="add" type="submit">Add</button>
       </div>
       <ul class="list"></ul>
       <script src="script.js"></script>
