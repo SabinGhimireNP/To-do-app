@@ -1,6 +1,6 @@
-let var1 = document.querySelector("#input");
-let btn = document.querySelector("#add");
-let todo = document.querySelector("#list");
+let var1 = document.querySelector(".input");
+let btn = document.querySelector(".add");
+let todo = document.querySelector(".list");
 let da = "";
 // console.log(var1);
 // console.log(btn);
