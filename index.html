@@ -1,27 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="A simple Todo List application">
+  <title>Todo List</title>
     <style>
       body {
-        /* width: 100vh; */
         font-family: Arial, sans-serif;
-        font-size: small;
         background-color: rgb(167, 228, 250);
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
       }
       .inner_body {
         border: 2px solid black;
-        height: 100%;
-        width: 100%;
+        height: auto;
+        width: 100vh;
         border-radius: 20px;
         display: flex;
         align-items: center;
-        align-content: center;
         justify-content: center;
         flex-direction: column;
         background-color: antiquewhite;
@@ -42,46 +39,47 @@
         color: rgb(6, 4, 15);
       }
       input {
-        width: 30rem;
-        height: 1rem;
+        width: 25rem;
+        height: 2rem;
         padding: 8px;
         border-radius: 15px;
         background-color: antiquewhite;
       }
       button {
         height: 2rem;
-        width: 8rem;
+        width: auto;
         border-radius: 20px;
         background-color: antiquewhite;
-      }
-      .add {
-        height: 2rem;
-        width: 5rem;
-      }
-      @media (max-width: 700px) {
-        body {
-          width: 100%;
-          font-size: medium;
+            }
+            @media (max-width: 1280px) {
+        .inner_body {
+          width: 90%;
+          padding: auto;
+        }
+        .main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
         input {
-          width: auto;
+          width: 100%;
+          max-width: 20rem;
+          margin-bottom: 1rem;
         }
         button {
-          height: auto;
           width: auto;
+          max-width: 10rem;
         }
-        .inner_body {
-          border: 2px solid black;
-          height: auto;
-          border-radius: 20px;
-          display: flex;
-          align-items: center;
-          align-content: center;
-          justify-content: center;
-          flex-direction: column;
-          background-color: antiquewhite;
+        .list {
+          width: 100%;
+          padding-left: 5rem;
         }
       }
+      .add{
+        width:100%
+      }
+    </style>
+  </head>
     </style>
   </head>
   <body>
@@ -90,18 +88,10 @@
         <h1>MY todo List</h1>
       </div>
       <div class="main">
-        <input
-          type="text"
-          id="input"
-          class="input"
-          placeholder="Your Text"
-          required
-          value=""
-        />
-
-        <button id="add" class="add" type="submit">Add</button>
+        <input type="text" class="input" id="input" placeholder="Your Text" />
+        <button class="add" id="input">Add</button>
       </div>
-      <ul id="list" class="add"></ul>
+      <ul class="list" id="input"></ul>
       <script src="script.js"></script>
     </div>
   </body>
