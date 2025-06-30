@@ -22,7 +22,6 @@
 //     todo.removeChild(deletebutton);
 //   });
 // });
-
 let var1 = document.querySelector(".input");
 let btn = document.querySelector(".add");
 let todo = document.querySelector(".list");
@@ -56,6 +55,7 @@ function addTask(taskText) {
   deletebutton.addEventListener("click", function () {
     todo.removeChild(li);
     todo.removeChild(deletebutton);
+    saveData();
     saveData();
   });
 }
