@@ -31,7 +31,14 @@ window.onload = function () {
   loadData();
 };
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", addEvent);
+window.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    addEvent();
+  }
+});
+
+function addEvent() {
   let inputValue = var1.value.trim();
   if (!inputValue) {
     alert("Please enter a valid input");
@@ -41,7 +48,7 @@ btn.addEventListener("click", function () {
   addTask(inputValue);
   var1.value = "";
   saveData();
-});
+}
 
 function addTask(taskText) {
   let li = document.createElement("li");
